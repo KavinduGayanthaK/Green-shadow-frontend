@@ -8,11 +8,97 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/auth.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="title">Sign in</h2>
+                    <img src="assets/images/Green%20Vintage%20Agriculture%20and%20Crops%20Farming%20Logo.png" alt="Green shadow logo" width="150px">
+                    <div class="col-md-8 position-relative border border-black rounded-2">
+                        <input type="text" class="form-control" id="signIn-email" placeholder="email" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-8 position-relative mt-3 border border-black rounded-2">
+                        <input type="text" class="form-control" id="signIn-password" placeholder="password" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <input type="submit" value="Login" class="btn solid" />
+
+                </form>
+                <form action="#" class="sign-up-form">
+                    <h2 class="title">Sign up</h2>
+                    <img src="assets/images/Green%20Vintage%20Agriculture%20and%20Crops%20Farming%20Logo.png" alt="Green shadow logo" width="150px">
+                    <div class="col-md-8 position-relative border border-black rounded-2">
+                        <input type="text" class="form-control" id="signUp-email" placeholder="email" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-8 position-relative mt-3 border border-black rounded-2">
+                        <input type="text" class="form-control" id="signUp-password" placeholder="password" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-select  mb-3 mt-3 border border-black rounded-2" aria-label="Large select example" >
+                            <option selected disabled value="">Choose role</option>
+                            <option value="1">Manager</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn" value="Sign up" />
+
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Welcome to the Green Shadow (Pvt) Ltd.</h3>
+                    <p>
+                        Register now for a personalized experience with Green Shadow  Management System!
+                    </p>
+                    <button class="btn transparent" id="sign-up-btn">
+                        Sign up
+                    </button>
+                </div>
+                <img  src="https://i.ibb.co/6HXL6q1/Privacy-policy-rafiki.png" class="image" alt="" />
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Welcome to the Green Shadow (Pvt) Ltd.</h3>
+                    <p>
+                        Register now for a personalized experience with Green Shadow  Management System!
+                    </p>
+                    <button class="btn transparent" id="sign-in-btn">
+                        Sign in
+                    </button>
+                </div>
+                <img src="https://i.ibb.co/nP8H853/Mobile-login-rafiki.png"  class="image" alt="" />
+            </div>
+        </div>
+    </div>
 
 
+
+
+<script src="assets/js/auth.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
