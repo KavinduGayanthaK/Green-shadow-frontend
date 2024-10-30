@@ -9,237 +9,478 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<!--Dashboard-->
-<section id="dashboard">
-    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
-        <!-- Vertical Navbar -->
-        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
-             id="navbarVertical">
-            <div class="container-fluid">
-                <!-- Toggler -->
-                <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Brand -->
+<body class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
 
-                    <img src="assets/images/Green%20Vintage%20Agriculture%20and%20Crops%20Farming%20Logo.png" alt="..." width="150px">
+<!-- Vertical Navbar -->
+<nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
+     id="navbarVertical">
+    <div class="container-fluid">
+        <!-- Toggler -->
+        <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
 
-                <!-- User menu (mobile) -->
-                <div class="navbar-user d-lg-none">
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                        <!-- Toggle -->
-                        <a href="#" id="sidebarAvatar" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="avatar-parent-child">
-                                <img alt="Image Placeholder"
-                                     src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                     class="avatar avatar- rounded-circle">
-                                <span class="avatar-child avatar-badge bg-success"></span>
-                            </div>
-                        </a>
-                        <!-- Menu -->
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarAvatar">
-                            <a href="#" class="dropdown-item">Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Billing</a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">Logout</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Collapse -->
-                <div class="collapse navbar-collapse" id="sidebarCollapse">
-                    <!-- Navigation -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-house"></i> Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bx bxs-user"></i> Staff
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-chat"></i> Messages
-                                <span class="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-bookmarks"></i> Collections
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-people"></i> Users
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Divider -->
-                    <hr class="navbar-divider my-5 opacity-20">
-                    <!-- Navigation -->
+        <img src="assets/images/Green%20Vintage%20Agriculture%20and%20Crops%20Farming%20Logo.png" alt="..."
+             width="150px">
 
-                    <!-- Push content down -->
-                    <div class="mt-auto"></div>
-                    <!-- User (md) -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-person-square"></i> Account
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-box-arrow-left"></i> Logout
-                            </a>
-                        </li>
-                    </ul>
+        <!-- User menu (mobile) -->
+        <div class="navbar-user d-lg-none">
+            <!-- Dropdown -->
+            <div class="dropdown">
+                <!-- Toggle -->
+                <a href="#" id="sidebarAvatar" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+
+                </a>
+                <!-- Menu -->
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarAvatar">
+                    <a href="#" class="dropdown-item">Profile</a>
+                    <a href="#" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item">Billing</a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">Logout</a>
                 </div>
             </div>
-        </nav>
-        <!-- Main content -->
-        <div class="h-screen flex-grow-1 overflow-y-lg-auto ">
-            <!-- Header -->
-            <header class="bg-surface-primary border-bottom pt-6 mb-2">
-                <div class="container-fluid">
-                    <div class="mb-npx">
-                        <div class="row align-items-center">
-                            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
-                                <!-- Title -->
-                                <h1 class="h2 mb-0 ls-tight">Dashboard</h1>
-                            </div>
-                            <!-- Actions -->
-                            <div class="col-sm-6 col-12 text-sm-end mb-2">
-                                <div class="mx-n1">
-                                    <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1 bg-success" >
+        </div>
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidebarCollapse">
+            <!-- Navigation -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a id="dashboard" class="nav-link" href="#">
+                        <i class="bi bi-house"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="staff" class="nav-link" href="#">
+                        <i class="bx bxs-user"></i> Staff
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="field" class="nav-link" href="#">
+                        <i class='bx bxs-spa'></i> Field
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-bookmarks"></i> Collections
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-people"></i> Users
+                    </a>
+                </li>
+            </ul>
+            <!-- Divider -->
+            <hr class="navbar-divider my-5 opacity-20">
+            <!-- Navigation -->
 
-                                        <span>SIGN IN</span>
-                                    </a>
-                                    <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
+            <!-- Push content down -->
+            <div class="mt-auto"></div>
+            <!-- User (md) -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-person-square"></i> Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-box-arrow-left"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Dashboard-->
+<section id="dashboard-section" class="w-100">
+    <!-- Main content -->
+    <div class="h-screen flex-grow-1 overflow-y-lg-auto ">
+        <!-- Header -->
+        <header class="bg-surface-primary border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Dashboard</h1>
+                        </div>
+                        <!-- Actions -->
+                        <div class="col-sm-6 col-12 text-sm-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#"
+                                   class="btn d-inline-flex btn-sm btn-neutral border-base mx-1 bg-success">
+
+                                    <span>SIGN IN</span>
+                                </a>
+                                <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
                                     <span class=" pe-2">
                                         <i class="bi bi-plus"></i>
                                     </span>
-                                        <span>SIGN UP</span>
-                                    </a>
-                                </div>
+                                    <span>SIGN UP</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
-            <!-- Main -->
-            <main class="py-6 bg-surface-secondary">
-                <div class="container-fluid">
-                    <!-- Card stats -->
-                    <div class="row g-6 mb-6">
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                                            <span class="h3 font-bold mb-0">$750.90</span>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                                                <i class="bi bi-credit-card"></i>
-                                            </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="py-6 bg-surface-secondary">
+            <div class="container-fluid">
+                <!-- Card stats -->
+                <div class="row g-6 mb-6">
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
+                                        <span class="h3 font-bold mb-0">$750.90</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                                            <i class="bi bi-credit-card"></i>
                                         </div>
                                     </div>
-                                    <div class="mt-2 mb-0 text-sm">
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
                                     <span class="badge badge-pill bg-soft-success text-success me-2">
                                         <i class="bi bi-arrow-up me-1"></i>13%
                                     </span>
-                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
-                                    </div>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">New projects</span>
-                                            <span class="h3 font-bold mb-0">215</span>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
-                                                <i class="bi bi-people"></i>
-                                            </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">New projects</span>
+                                        <span class="h3 font-bold mb-0">215</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                            <i class="bi bi-people"></i>
                                         </div>
                                     </div>
-                                    <div class="mt-2 mb-0 text-sm">
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
                                     <span class="badge badge-pill bg-soft-success text-success me-2">
                                         <i class="bi bi-arrow-up me-1"></i>30%
                                     </span>
-                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
-                                    </div>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total hours</span>
-                                            <span class="h3 font-bold mb-0">1.400</span>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
-                                                <i class="bi bi-clock-history"></i>
-                                            </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total hours</span>
+                                        <span class="h3 font-bold mb-0">1.400</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                            <i class="bi bi-clock-history"></i>
                                         </div>
                                     </div>
-                                    <div class="mt-2 mb-0 text-sm">
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
                                     <span class="badge badge-pill bg-soft-danger text-danger me-2">
                                         <i class="bi bi-arrow-down me-1"></i>-5%
                                     </span>
-                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
-                                    </div>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Work load</span>
-                                            <span class="h3 font-bold mb-0">95%</span>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
-                                                <i class="bi bi-minecart-loaded"></i>
-                                            </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Work load</span>
+                                        <span class="h3 font-bold mb-0">95%</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                            <i class="bi bi-minecart-loaded"></i>
                                         </div>
                                     </div>
-                                    <div class="mt-2 mb-0 text-sm">
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
                                     <span class="badge badge-pill bg-soft-success text-success me-2">
                                         <i class="bi bi-arrow-up me-1"></i>10%
                                     </span>
-                                        <span class="text-nowrap text-xs text-muted">Since last month</span>
-                                    </div>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
+        </main>
+    </div>
+
+</section>
+
+<!--Staff-->
+<section id="staff-section" class="w-100 overflow-auto">
+    <div class="h-screen flex-grow-1 overflow-y-lg-auto ">
+        <header class="border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Staff</h1>
+                        </div>
+                        <div class="col-sm-6 col-12 text-sm-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-sm  mx-1 text-light" style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-staff-modal">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>ADD EMPLOYEE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="add-staff-modal"  class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl"  >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-firstname" class="form-control" >
+                                        <label for="staff-firstname" class="form-label" style="margin-left: 0;">First name</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-lastname" class="form-control" >
+                                        <label for="staff-lastname" class="form-label" style="margin-left: 0;">Last name</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Text input -->
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <select id="staff-designation" class="form-select" aria-label="Large select example" >
+                                            <option selected disabled value="">Choose Designation</option>
+                                            <option value="1">Manager</option>
+                                            <option value="2">Senior Assistant Manager</option>
+                                            <option value="2">Assistant Manager</option>
+                                            <option value="2"> Admin and HR Staff</option>
+                                            <option value="2"> Office Assistant</option>
+                                            <option value="2">Senior Agronomist</option>
+                                            <option value="2">Agronomist</option>
+                                            <option value="2">Soil Scientist</option>
+                                            <option value="2"> Senior Technician</option>
+                                            <option value="2">Technician</option>
+                                            <option value="2">Supervisors</option>
+                                            <option value="2">Agronomist</option>
+                                        </select>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <select id="staff-gender" class="form-select" aria-label="Large select example" >
+                                        <option selected disabled value="">Choose Gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                    <div class="form-notch">
+                                        <div class="form-notch-leading" style="width: 9px;"></div>
+                                        <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                        <div class="form-notch-trailing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input -->
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="date" id="staff-joinDate" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Join Date</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="date" id="staff-Date of birth" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Date Of Birth</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address1" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 1</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address2" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 2</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address3" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 3</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address4" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 4</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address5" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 5</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="number" id="staff-contactNumber" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Contact Number</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-email" class="form-control" >
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Email</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <select id="staff-role" class="form-select" aria-label="Large select example" >
+                                            <option selected disabled value="">Choose Role</option>
+                                            <option value="1">MANAGER</option>
+                                            <option value="2">ADMINISTRATIVE</option>
+                                            <option value="2">SCIENTIST</option>
+                                            <option value="2">OTHER</option>
+                                        </select>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <div class="row justify-content-lg-end">
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init="">CLOSE</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init="">CLEAR</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init="">CREATE EMPLOYEE</button>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center m-2 ">
+            <div class="  col-lg-12   border border-black  mt-3  rounded shadow-card">
+                <h1>Staff Table</h1>
+                <div class="table-responsive">
+                    <table class="table">
+                        <!--staff table head-->
+                        <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Designation</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Join Date</th>
+                            <th scope="col">Date Of Birth</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact No</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Field</th>
+                            <th scope="col">Vehicle</th>
+                            <th scope="col">Equipment</th>
+                            <th scope="col">Logs</th>
+                        </tr>
+
+                        </thead>
+                        <!--staff table body-->
+                        <tbody id="item-table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!--Field-->
+<section id="field-section">
 
+</section>
+
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+<script src="assets/js/applySpa.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.umd.min.js"
+></script>
 </body>
 </html>
