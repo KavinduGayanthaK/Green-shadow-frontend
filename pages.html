@@ -253,7 +253,8 @@
                         </div>
                         <div class="col-sm-6 col-12 text-sm-end mb-2">
                             <div class="mx-n1">
-                                <a href="#" class="btn d-inline-flex btn-sm  mx-1 text-light" style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-staff-modal">
+                                <a href="#" class="btn d-inline-flex btn-sm  mx-1 text-light"
+                                   style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-staff-modal">
                                     <span class=" pe-2">
                                         <i class="bi bi-plus"></i>
                                     </span>
@@ -265,57 +266,76 @@
                 </div>
             </div>
         </header>
-        <div id="add-staff-modal"  class="modal fade" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-xl"  >
+        <!--staff modal-->
+        <div id="add-staff-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
-                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-4">
                         <form>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
+
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-firstname" class="form-control" >
-                                        <label for="staff-firstname" class="form-label" style="margin-left: 0;">First name</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                        <input type="text" id="staff-firstname" class="form-control">
+                                        <label for="staff-firstname" class="form-label" style="margin-left: 0;">First
+                                            name</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-lastname" class="form-control" >
-                                        <label for="staff-lastname" class="form-label" style="margin-left: 0;">Last name</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
+                                        <input type="text" id="staff-lastname" class="form-control">
+                                        <label for="staff-lastname" class="form-label" style="margin-left: 0;">Last
+                                            name</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Text input -->
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <select id="staff-designation" class="form-select" aria-label="Large select example" >
+                                        <select id="staff-designation" class="form-select"
+                                                aria-label="Large select example">
                                             <option selected disabled value="">Choose Designation</option>
-                                            <option value="1">Manager</option>
-                                            <option value="2">Senior Assistant Manager</option>
-                                            <option value="2">Assistant Manager</option>
-                                            <option value="2"> Admin and HR Staff</option>
-                                            <option value="2"> Office Assistant</option>
-                                            <option value="2">Senior Agronomist</option>
-                                            <option value="2">Agronomist</option>
-                                            <option value="2">Soil Scientist</option>
-                                            <option value="2"> Senior Technician</option>
-                                            <option value="2">Technician</option>
-                                            <option value="2">Supervisors</option>
-                                            <option value="2">Agronomist</option>
+                                            <option value="MANAGER">MANAGER</option>
+                                            <option value="SENIOR ASSISTANT MANAGER">SENIOR ASSISTANT MANAGER</option>
+                                            <option value="ASSISTANT MANAGER">ASSISTANT MANAGER</option>
+                                            <option value="ADMIN AND HR STAFF"> ADMIN AND HR STAFF</option>
+                                            <option value="OFFICE ASSISTANT"> OFFICE ASSISTANT</option>
+                                            <option value="SENIOR AGRONOMIST">SENIOR AGRONOMIST</option>
+                                            <option value="AGRONOMIST">AGRONOMIST</option>
+                                            <option value="SOIL SCIENTIST">SOIL SCIENTIST</option>
+                                            <option value="SENIOR TECHNICIAN"> SENIOR TECHNICIAN</option>
+                                            <option value="TECHNICIAN">TECHNICIAN</option>
+                                            <option value="SUPERVISOR">SUPERVISOR</option>
+                                            <option value="LABOURS">LABOURS</option>
                                         </select>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <select id="staff-gender" class="form-select" aria-label="Large select example" >
+                                    <select id="staff-gender" class="form-select" aria-label="Large select example">
                                         <option selected disabled value="">Choose Gender</option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
+                                        <option value="MALE">MALE</option>
+                                        <option value="FEMALE">FEMALE</option>
                                     </select>
                                     <div class="form-notch">
                                         <div class="form-notch-leading" style="width: 9px;"></div>
@@ -324,80 +344,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Text input -->
-                            <div class="row mb-4">
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="date" id="staff-joinDate" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Join Date</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="date" id="staff-Date of birth" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Date Of Birth</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                            </div>
 
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-address1" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 1</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                                        <input type="date" id="staff-joinDate" class="form-control">
+                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Join
+                                            Date</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-address2" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 2</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-address3" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 3</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-address4" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 4</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-address5" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Address Line 5</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="number" id="staff-contactNumber" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Contact Number</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <input type="text" id="staff-email" class="form-control" >
-                                        <label for="staff-joinDate" class="form-label" style="margin-left: 0px;">Email</label>
-                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
-                                        <select id="staff-role" class="form-select" aria-label="Large select example" >
-                                            <option selected disabled value="">Choose Role</option>
-                                            <option value="1">MANAGER</option>
-                                            <option value="2">ADMINISTRATIVE</option>
-                                            <option value="2">SCIENTIST</option>
-                                            <option value="2">OTHER</option>
-                                        </select>
+                                        <input type="date" id="staff-DateOfBirth" class="form-control">
+                                        <label for="staff-DateOfBirth" class="form-label" style="margin-left: 0px;">Date
+                                            Of Birth</label>
                                         <div class="form-notch">
                                             <div class="form-notch-leading" style="width: 9px;"></div>
                                             <div class="form-notch-middle" style="width: 68.8px;"></div>
@@ -407,16 +372,159 @@
                                 </div>
                             </div>
 
-                            <!-- Submit button -->
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address1" class="form-control">
+                                        <label for="staff-address1" class="form-label" style="margin-left: 0px;">Address
+                                            Line 1</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address2" class="form-control">
+                                        <label for="staff-address2" class="form-label" style="margin-left: 0px;">Address
+                                            Line 2</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address3" class="form-control">
+                                        <label for="staff-address3" class="form-label" style="margin-left: 0px;">Address
+                                            Line 3</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address4" class="form-control">
+                                        <label for="staff-address4" class="form-label" style="margin-left: 0px;">Address
+                                            Line 4</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-address5" class="form-control">
+                                        <label for="staff-address5" class="form-label" style="margin-left: 0px;">Address
+                                            Line 5</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="number" id="staff-contactNumber" class="form-control">
+                                        <label for="staff-contactNumber" class="form-label" style="margin-left: 0px;">Contact
+                                            Number</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-email" class="form-control">
+                                        <label for="staff-email" class="form-label"
+                                               style="margin-left: 0px;">Email</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <select id="staff-role" class="form-select" aria-label="Large select example">
+                                            <option selected disabled value="">Choose Role</option>
+                                            <option value="MANAGER">MANAGER</option>
+                                            <option value="ADMINISTRATIVE">ADMINISTRATIVE</option>
+                                            <option value="SCIENTIST">SCIENTIST</option>
+                                            <option value="OTHER">OTHER</option>
+                                        </select>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <select id="staff-field" class="form-select" aria-label="Large select example">
+                                        <option selected disabled value="">Choose Field or Fields</option>
+
+                                    </select>
+                                    <div class="form-notch">
+                                        <div class="form-notch-leading" style="width: 9px;"></div>
+                                        <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                        <div class="form-notch-trailing"></div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="staff-vehicle" class="form-control">
+                                        <label for="staff-vehicle" class="form-label"
+                                               style="margin-left: 0px;">Vehicle</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Action button -->
                             <div class="row justify-content-lg-end">
                                 <div class="col-md-2">
-                                    <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init="">CLOSE</button>
+                                    <button type="submit" id="close-employee-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLOSE
+                                    </button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init="">CLEAR</button>
+                                    <button type="submit" id="clear-employee-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLEAR
+                                    </button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init="">CREATE EMPLOYEE</button>
+                                    <button type="submit" id="create-employee-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CREATE EMPLOYEE
+                                    </button>
                                 </div>
 
                             </div>
@@ -426,7 +534,7 @@
                 </div>
             </div>
         </div>
-
+        <!--staff table-->
         <div class="row justify-content-center m-2 ">
             <div class="  col-lg-12   border border-black  mt-3  rounded shadow-card">
                 <h1>Staff Table</h1>
@@ -471,7 +579,8 @@
 
 
 <script src="assets/lib/jquery-3.7.1.min.js"></script>
-<script src="assets/js/applySpa.js"></script>
+<script src="assets/scripts/applySpa.js"></script>
+<script src="controller/staffController.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
