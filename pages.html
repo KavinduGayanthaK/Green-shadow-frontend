@@ -11,6 +11,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/dashboard.css">
     <link rel="stylesheet" href="assets/style/field.css">
+    <link rel="stylesheet" href="assets/style/staff.css">
+    <link rel="stylesheet" href="assets/style/crop.css">
+    <link rel="stylesheet" href="assets/style/vehicle.css">
+    <link rel="stylesheet" href="assets/style/equipment.css">
+    <link rel="stylesheet" href="assets/style/log.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.min.css" rel="stylesheet"/>
@@ -284,7 +289,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staffModalLabel">Add Employee</h5>
-                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal"
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-4">
@@ -323,18 +328,18 @@
                                         <select id="staff-designation" class="form-select"
                                                 aria-label="Large select example">
                                             <option selected disabled value="">Choose Designation</option>
-                                            <option value="MANAGER">MANAGER</option>
-                                            <option value="SENIOR ASSISTANT MANAGER">SENIOR ASSISTANT MANAGER</option>
-                                            <option value="ASSISTANT MANAGER">ASSISTANT MANAGER</option>
-                                            <option value="ADMIN AND HR STAFF"> ADMIN AND HR STAFF</option>
-                                            <option value="OFFICE ASSISTANT"> OFFICE ASSISTANT</option>
-                                            <option value="SENIOR AGRONOMIST">SENIOR AGRONOMIST</option>
-                                            <option value="AGRONOMIST">AGRONOMIST</option>
-                                            <option value="SOIL SCIENTIST">SOIL SCIENTIST</option>
-                                            <option value="SENIOR TECHNICIAN"> SENIOR TECHNICIAN</option>
-                                            <option value="TECHNICIAN">TECHNICIAN</option>
-                                            <option value="SUPERVISOR">SUPERVISOR</option>
-                                            <option value="LABOURS">LABOURS</option>
+                                            <option value="MANAGER">Manager</option>
+                                            <option value="SENIORASSISTANTMANAGER">Senior Assistant Manager</option>
+                                            <option value="ASSISTANTMANAGER">Assistant Manager</option>
+                                            <option value="ADMINANDHRSTAFF"> Admin and HR Staff</option>
+                                            <option value="OFFICEASSISTANT"> Office Assistant</option>
+                                            <option value="SENIORAGRONOMIST">Senior AgronomistT</option>
+                                            <option value="AGRONOMIST">AgronomistT</option>
+                                            <option value="SOILSCIENTIST">Soil scientist</option>
+                                            <option value="SENIORTECHNICIAN"> Senior Technician</option>
+                                            <option value="TECHNICIAN">Technician</option>
+                                            <option value="SUPERVISOR">Supervisor</option>
+                                            <option value="LABOURS">Labours</option>
                                         </select>
                                         <div class="form-notch">
                                             <div class="form-notch-leading" style="width: 9px;"></div>
@@ -346,8 +351,8 @@
                                 <div class="col">
                                     <select id="staff-gender" class="form-select" aria-label="Large select example">
                                         <option selected disabled value="">Choose Gender</option>
-                                        <option value="MALE">MALE</option>
-                                        <option value="FEMALE">FEMALE</option>
+                                        <option value="MALE">Male</option>
+                                        <option value="FEMALE">Female</option>
                                     </select>
                                     <div class="form-notch">
                                         <div class="form-notch-leading" style="width: 9px;"></div>
@@ -482,10 +487,10 @@
                                     <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
                                         <select id="staff-role" class="form-select" aria-label="Large select example">
                                             <option selected disabled value="">Choose Role</option>
-                                            <option value="MANAGER">MANAGER</option>
-                                            <option value="ADMINISTRATIVE">ADMINISTRATIVE</option>
-                                            <option value="SCIENTIST">SCIENTIST</option>
-                                            <option value="OTHER">OTHER</option>
+                                            <option value="MANAGER">Manager</option>
+                                            <option value="ADMINISTRATIVE">Administrative</option>
+                                            <option value="SCIENTIST">Scientist</option>
+                                            <option value="OTHER">Other</option>
                                         </select>
                                         <div class="form-notch">
                                             <div class="form-notch-leading" style="width: 9px;"></div>
@@ -535,6 +540,22 @@
                                         </div>
                                     </div>
                                 </div>
+<!--                                <div class="mb-3">-->
+<!--                                    <label for="staff-equipmentSearch" class="form-label">Search Equipment:</label>-->
+<!--                                    <input type="text" id="staff-equipmentSearch" class="form-control" placeholder="Search And Select Equipment">-->
+<!--                                    <div id="autocomplete-staffEquipmentSearch" class="autocomplete-suggestions-staffEquipment"></div>-->
+<!--                                    <div id="staff-selectedEquipmentSearch" class="selected-fields list-group"></div>-->
+<!--                                </div>-->
+
+<!--                                &lt;!&ndash; Quantity Input &ndash;&gt;-->
+<!--                                <div class="mb-3">-->
+<!--                                    <label for="equipmentQuantity" class="form-label">Quantity:</label>-->
+<!--                                    <input type="number" id="equipmentQuantity" class="form-control" placeholder="Enter quantity" min="1">-->
+<!--                                </div>-->
+
+<!--                                <button id="assignEquipmentBtn" class="btn btn-primary">Assign Equipment</button>-->
+
+<!--                                <hr>-->
                             </div>
                             <!-- Action button -->
                             <div class="row justify-content-lg-end">
@@ -570,21 +591,21 @@
                         <!--staff table head-->
                         <thead style="background-color: #35d3e1; font-size: 14px;" class="text-center ">
                         <tr>
-                            <th class="fs-5" scope="col">Id</th>
-                            <th class="fs-5" scope="col">First Name</th>
-                            <th class="fs-5" scope="col">Last Name</th>
-                            <th class="fs-5" scope="col">Designation</th>
-                            <th class="fs-5" scope="col">Gender</th>
-                            <th class="fs-5" scope="col">Join Date</th>
-                            <th class="fs-5"  scope="col">Date Of Birth</th>
-                            <th class="fs-5" scope="col">Address</th>
-                            <th class="fs-5" scope="col">Contact No</th>
-                            <th class="fs-5" scope="col">Email</th>
-                            <th class="fs-5" scope="col">Role</th>
-                            <th class="fs-5" scope="col">Field</th>
-                            <th class="fs-5" scope="col">Vehicle</th>
-                            <th class="fs-5" scope="col">Equipment</th>
-                            <th class="fs-5" scope="col">Action</th>
+                            <th class="fs-6" scope="col">Id</th>
+                            <th class="fs-6" scope="col">First Name</th>
+                            <th class="fs-6" scope="col">Last Name</th>
+                            <th class="fs-6" scope="col">Designation</th>
+                            <th class="fs-6" scope="col">Gender</th>
+                            <th class="fs-6" scope="col">Join Date</th>
+                            <th class="fs-6"  scope="col">Date Of Birth</th>
+                            <th class="fs-6" scope="col">Address</th>
+                            <th class="fs-6" scope="col">Contact No</th>
+                            <th class="fs-6" scope="col">Email</th>
+                            <th class="fs-6" scope="col">Role</th>
+                            <th class="fs-6" scope="col">Field</th>
+                            <th class="fs-6" scope="col">Vehicle</th>
+                            <th class="fs-6" scope="col">Equipment</th>
+                            <th class="fs-6" scope="col">Action</th>
                         </tr>
 
                         </thead>
@@ -599,12 +620,840 @@
     </div>
 </section>
 
+<!--Field-->
+<section id="field-section" class="w-100">
+    <div class="h-screen flex-grow-1  ">
+        <header class="border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Field</h1>
+                        </div>
+                        <div class="col-md-6  text-lg-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-md  mx-1 text-light"
+                                   style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-field-modal">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>ADD FIELD</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--field modal-->
+        <div id="add-field-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fieldModalLabel">Add Field</h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="field-name" class="form-control">
+                                        <label for="field-name" class="form-label" style="margin-left: 0;">Field Name</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="field-location" class="form-control">
+                                        <label for="field-location" class="form-label" style="margin-left: 0;">Field Location</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
 
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="field-extentSizeOfTheField" class="form-control" >
+                                        <label for="field-extentSizeOfTheField" class="form-label" style="margin-left: 0;">Extend Size Of The Field</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="field-cropsSearch" class="form-control" placeholder="Search And Select Crops">
+                                        <div id="autocomplete-fieldCrop" class="autocomplete-suggestions-fieldCrop"></div>
+                                        <div id="selectedFieldsCrop" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="field-staffSearch" class="form-control" placeholder="Search And Select Staff">
+                                        <div id="autocomplete-fieldStaff" class="autocomplete-suggestions-fieldStaff"></div>
+                                        <div id="selectedFieldsStaff" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row mb-3">
+                                <!-- Field Image 1 -->
+                                <div class="col-md-6">
+                                    <label for="fieldImage1" class="form-label">Field Image 1</label>
+                                    <input type="file" class="form-control" id="fieldImage1" accept="image/*">
+                                    <img id="preview1" src="#" alt="Image Preview 1" class="img-fluid mt-2 d-none" style="max-height: 150px;">
+                                </div>
+                                <!-- Field Image 2 -->
+                                <div class="col-md-6">
+                                    <label for="fieldImage2" class="form-label">Field Image 2</label>
+                                    <input type="file" class="form-control" id="fieldImage2" accept="image/*">
+                                    <img id="preview2" src="#" alt="Image Preview 2" class="img-fluid mt-2 d-none" style="max-height: 150px;">
+                                </div>
+                            </div>
+
+                            <!-- Action button -->
+                            <div class="row justify-content-sm-end mt-5">
+                                <div class="col-md-2">
+                                    <button type="submit" id="close-field-btn" class="btn btn-primary btn-block "
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CLOSE
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="clear-field-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLEAR
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="create-field-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CREATE FIELD
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--field card-->
+        <div class=" " style="border-radius: 10px; overflow: auto; background-color: #f8f9fa; width: 100%; height: 88%" >
+            <div id="fieldCardSection" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 gap-2 justify-content-center">
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--crop-->
+<section id="crop-section" class="w-100">
+    <div class="h-screen flex-grow-1  ">
+        <header class="border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Crops</h1>
+                        </div>
+                        <div class="col-md-6  text-lg-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-md  mx-1 text-light"
+                                   style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-crop-modal">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>ADD CROP</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--crop modal-->
+        <div id="add-crop-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cropModalLabel">Add Field</h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="crop-commonName" class="form-control">
+                                        <label for="crop-commonName" class="form-label" style="margin-left: 0;">Crop Common Name</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="crop-scientificName" class="form-control">
+                                        <label for="field-location" class="form-label" style="margin-left: 0;">Crop Scientific Name</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="crop-category" class="form-control" >
+                                        <label for="crop-category" class="form-label" style="margin-left: 0;">Crop Category</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="crop-season" class="form-control" >
+                                        <label for="crop-season" class="form-label" style="margin-left: 0;">Crop Season</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="crop-fields" class="form-control" placeholder="Search And Select Field or Fields">
+                                        <div id="autocomplete-cropField" class="autocomplete-suggestions-cropField"></div>
+                                        <div id="selectedCropField" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <!-- Crop Image 1 -->
+                                <div class="col-md-6">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <label for="fieldImage1" class="form-label">Field Image 1</label>
+                                        <input type="file" class="form-control" id="cropImage1" accept="image/*">
+                                        <img id="previewCropImage" src="#" alt="Image Preview 1" class="img-fluid mt-2 d-none" style="max-height: 150px;">
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- Action button -->
+                            <div class="row justify-content-sm-end mt-5">
+                                <div class="col-md-2">
+                                    <button type="submit" id="close-crop-btn" class="btn btn-primary btn-block "
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CLOSE
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="clear-crop-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLEAR
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="create-crop-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CREATE CROP
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--crop card-->
+        <div class="ms-3 " style="border-radius: 10px; overflow: auto; background-color: #f8f9fa; width: 100%; height: 88%" >
+            <div id="cropCardSection" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 gap-2 ">
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Vehicle-->
+<section id="vehicle-section" class="w-100">
+    <div class="h-screen flex-grow-1  ">
+        <header class="border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Vehicle</h1>
+                        </div>
+                        <div class="col-md-6  text-lg-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-md  mx-1 text-light"
+                                   style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-vehicle-modal">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>ADD VEHICLE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--vehicle modal-->
+        <div id="add-vehicle-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="vehicleModalLabel">Add Vehicle</h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="vehicle-licensePlateNumber" class="form-control">
+                                        <label for="vehicle-licensePlateNumber" class="form-label" style="margin-left: 0;">Vehicle License Plate Number</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="vehicle-category" class="form-control">
+                                        <label for="vehicle-category" class="form-label" style="margin-left: 0;">Vehicle Category</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <select id="vehicle-fuelType" class="form-select" aria-label="Large select example">
+                                            <option selected disabled value="">Select Vehicle Fuel Type</option>
+                                            <option value="PETROL">Petrol</option>
+                                            <option value="DIESEL">Diesel</option>
+                                            <option value="ELECTRIC">Electric</option>
+                                        </select>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <select id="vehicle-status" class="form-select" aria-label="Large select example">
+                                            <option selected disabled value="">Select Vehicle Status</option>
+                                            <option value="AVAILABLE">AVAILABLE</option>
+                                            <option value="CURRENTLYSERVICE">Currently in Service</option>
+                                            <option value="OUTOFSERVICE">Out of Service</option>
+
+                                        </select>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="vehicle-staffSearch" class="form-control" placeholder="Search And Select Allocated Staff member">
+                                        <div id="autocomplete-vehicleStaffMember" class="autocomplete-suggestions-vehicleStaffMember"></div>
+                                        <div id="vehicle-selectedStaffSearch" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="vehicle-specialRemark" class="form-control" >
+                                        <label for="vehicle-specialRemark" class="form-label" style="margin-left: 0;">Special Remark</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action button -->
+                            <div class="row justify-content-sm-end mt-5">
+                                <div class="col-md-2">
+                                    <button type="submit" id="close-vehicle-btn" class="btn btn-primary btn-block "
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CLOSE
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="clear-vehicle-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLEAR
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="create-vehicle-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CREATE VEHICLE
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--vehicle table-->
+        <div class="row justify-content-center m-2 ">
+            <div class="  col-lg-12   border border-black  mt-3  rounded shadow-card">
+                <h1>Vehicle Table</h1>
+                <div class="table-responsive table-scroll">
+                    <table class="table table-striped mb-0">
+                        <!--vehicle table head-->
+                        <thead style="background-color: #35d3e1; font-size: 14px;" class="text-center ">
+                        <tr>
+                            <th class="fs-6" scope="col">License Plate Number</th>
+                            <th class="fs-6" scope="col">Category</th>
+                            <th class="fs-6" scope="col">Fuel Type</th>
+                            <th class="fs-6" scope="col">Status</th>
+                            <th class="fs-6" scope="col">Allocated Member</th>
+                            <th class="fs-6" scope="col">Special Remark</th>
+                        </tr>
+
+                        </thead>
+                        <!--vehicle table body-->
+                        <tbody id="vehicle-table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Equipment-->
+<section id="equipment-section" class="w-100 overflow-auto">
+    <div class="h-screen flex-grow-1  ">
+        <header class="border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Equipment</h1>
+                        </div>
+                        <div class="col-md-6  text-lg-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-md  mx-1 text-light"
+                                   style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-equipment-modal">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>ADD EQUIPMENT</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Equipment modal-->
+        <div id="add-equipment-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="equipmentModalLabel">Add Equipment</h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="equipment-name" class="form-control">
+                                        <label for="equipment-name" class="form-label" style="margin-left: 0;">Equipment Name</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="equipment-type" class="form-control">
+                                        <label for="equipment-type" class="form-label" style="margin-left: 0;">Equipment Type</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="number" id="equipment-count" class="form-control">
+                                        <label for="equipment-count" class="form-label" style="margin-left: 0;">Equipment Count</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="number" id="equipment-assign-count" class="form-control">
+                                        <label for="equipment-assign-count" class="form-label" style="margin-left: 0;">Equipment Assign Count</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <select id="equipment-status" class="form-select" aria-label="Large select example">
+                                            <option selected disabled value="">Select Equipment Status</option>
+                                            <option value="Available">AVAILABLE</option>
+                                            <option value="Out of Service">Out of Service</option>
+                                            <option value="Currently in Service">Currently in Service</option>
+                                            <option value="Out of Service">Out of Service</option>
+                                        </select>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 55.2px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="equipment-fieldSearch" class="form-control" placeholder="Search And Select Allocated Fields">
+                                        <div id="autocomplete-equipmentFields" class="autocomplete-suggestions-equipmentField"></div>
+                                        <div id="equipment-selectedFields" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="equipment-staffSearch" class="form-control" placeholder="Search And Select Allocated Staff members">
+                                        <div id="autocomplete-equipmentStaffMember" class="autocomplete-suggestions-equipmentStaffMember"></div>
+                                        <div id="equipment-selectedStaffSearch" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Action button -->
+                            <div class="row justify-content-sm-end mt-5">
+                                <div class="col-md-2">
+                                    <button type="submit" id="close-equipment-btn" class="btn btn-primary btn-block "
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CLOSE
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="clear-equipment-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLEAR
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="create-equipment-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="" >CREATE EQUIPMENT
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Equipment table-->
+        <div class="row justify-content-center m-2 ">
+            <div class="  col-lg-12   border border-black  mt-3  rounded shadow-card">
+                <h1>Equipment Table</h1>
+                <div class="table-responsive table-scroll">
+                    <table class="table table-striped mb-0">
+                        <!--equipment table head-->
+                        <thead style="background-color: #35d3e1; font-size: 14px;" class="text-center ">
+                        <tr>
+                            <th class="fs-6" scope="col">Equipment Id</th>
+                            <th class="fs-6" scope="col">Equipment Name</th>
+                            <th class="fs-6" scope="col">Equipment Type</th>
+                            <th class="fs-6" scope="col">Equipment count</th>
+                            <th class="fs-6" scope="col">Assigned count</th>
+                            <th class="fs-6" scope="col">Equipment Status</th>
+
+                        </tr>
+
+                        </thead>
+                        <!--equipment table body-->
+                        <tbody id="equipment-table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--logs-->
+<section id="logs-section" class="w-100">
+    <div class="h-screen flex-grow-1  ">
+        <header class="border-bottom pt-6 mb-2">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight">Logs</h1>
+                        </div>
+                        <div class="col-md-6  text-lg-end mb-2">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-md  mx-1 text-light"
+                                   style="background: #1154BF" data-bs-toggle="modal" data-bs-target="#add-log-modal">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>ADD LOGS</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--log modal-->
+        <div id="add-log-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="logModalLabel">Add Log</h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init="" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="log-detail" class="form-control">
+                                        <label for="log-detail" class="form-label" style="margin-left: 0;">Log Detail</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true">
+
+                                        <input type="date" id="log-date" class="form-control">
+                                        <label for="log-date" class="form-label" style="margin-left: 0;">Log Date</label>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="log-fieldSearch" class="form-control" placeholder="Search And Select Fields">
+                                        <div id="autocomplete-logFields" class="autocomplete-suggestions-logField"></div>
+                                        <div id="log-selectedFields" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="log-staffSearch" class="form-control" placeholder="Search And Select  Staff members">
+                                        <div id="autocomplete-logStaffMember" class="autocomplete-suggestions-logStaffMember"></div>
+                                        <div id="log-selectedStaffSearch" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <input type="text" id="log-cropSearch" class="form-control" placeholder="Search And Select Crops">
+                                        <div id="autocomplete-logCrops" class="autocomplete-suggestions-logCrop"></div>
+                                        <div id="log-selectedCrops" class="selected-fields"></div>
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div  data-mdb-input-init="" data-mdb-input-initialized="true">
+                                        <label for="Image1-log" class="form-label">Log Image</label>
+                                        <input type="file" class="form-control" id="Image1-log" accept="image/*">
+                                        <img id="previewImage-log" src="#" alt="Image Preview Log" class="img-fluid mt-2 d-none" style="max-height: 150px;">
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- Action button -->
+                            <div class="row justify-content-sm-end mt-5">
+                                <div class="col-md-2">
+                                    <button type="submit" id="close-log-btn" class="btn btn-primary btn-block "
+                                            data-mdb-ripple-init="" data-bs-dismiss="modal">CLOSE
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="clear-log-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="">CLEAR
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="create-log-btn" class="btn btn-primary btn-block"
+                                            data-mdb-ripple-init="" >CREATE LOG
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--log card-->
+        <div class="ms-3 " style="border-radius: 10px; overflow: auto; background-color: #f8f9fa; width: 100%; height: 88%" >
+            <div id="logCardSection" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 gap-2 ">
+
+            </div>
+        </div>
+    </div>
+</section>
 
 <script  src="assets/lib/jquery-3.7.1.min.js"></script>
 <script src="assets/scripts/applySpa.js"></script>
 <script type="module" src="controller/staffController.js"></script>
 <script type="module" src="controller/fieldController.js"></script>
+<script type="module" src="controller/cropController.js"></script>
+<script type="module" src="controller/vehicleController.js"></script>
+<script type="module" src="controller/equipmentController.js"></script>
+<script type="module" src="controller/logController.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
