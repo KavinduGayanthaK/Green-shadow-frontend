@@ -1,0 +1,17 @@
+.autocomplete-suggestions-vehicleStaffMember{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-vehicleStaffMember{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-vehicleStaffMember:hover {
+    background-color: #e9ecef;
+}
