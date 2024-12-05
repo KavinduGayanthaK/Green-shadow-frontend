@@ -1,0 +1,82 @@
+
+.rounded-searchbar {
+    border-radius: 17px !important;
+}
+
+.fixed-image {
+    height: 200px;
+    object-fit: cover;
+}
+.autocomplete-suggestions-fieldStaff{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-fieldStaff{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-fieldStaff:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions-fieldCrop{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-fieldCrop{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-fieldCrop:hover {
+    background-color: #e9ecef;
+}
+
+
+.autocomplete-suggestions-fieldEquipment{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-fieldEquipment{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-fieldEquipment:hover {
+    background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 150px; /* Reduce height on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner img {
+        height: 120px; /* Further reduce height on extra-small screens */
+    }
+}
+.field-details-content {
+    display: none; /* Ensures sections are initially hidden */
+}
+
+.field-details-content.expanded {
+    display: block;
+}
