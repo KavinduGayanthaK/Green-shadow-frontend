@@ -1,0 +1,17 @@
+.autocomplete-suggestions-cropField{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-cropField{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-cropField:hover {
+    background-color: #e9ecef;
+}
