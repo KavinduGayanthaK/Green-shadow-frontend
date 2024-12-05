@@ -1,0 +1,141 @@
+.autocomplete-suggestions {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+    background-color: #e9ecef;
+}
+.autocomplete-suggestions1 {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion1 {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion1:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions2 {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion2 {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion2:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions3 {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion3 {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion3:hover {
+    background-color: #e9ecef;
+}
+.selected-fields {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.selected-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+.selected-item i {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.autocomplete-suggestions-staffField {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-staffField{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-staffField:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions-staffVehicle{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-staffVehicle{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-staffVehicle:hover {
+    background-color: #e9ecef;
+}
+.autocomplete-suggestions-staffEquipment{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-staffEquipment{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-staffEquipment:hover {
+    background-color: #e9ecef;
+}
