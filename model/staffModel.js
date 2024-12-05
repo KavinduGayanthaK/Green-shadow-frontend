@@ -1,26 +1,11 @@
 export default class StaffModel {
-
-    constructor(firstName,lastName,designation,gender,joinedDate,dateOfBirth,address1,address2,address3,address4,address5,contactNumber,email,role,field,vehicle,equipment) {
-    this._firstName = firstName;
-        this._lastName = lastName;
-        this._designation = designation;
-        this._gender = gender;
-        this._joinedDate = joinedDate;
-        this._dateOfBirth = dateOfBirth;
-        this._address1 = address1;
-        this._address2 = address2;
-        this._address3 = address3;
-        this._address4 = address4;
-        this._address5 = address5;
-        this._contactNumber = contactNumber;
-        this._email = email;
-        this._role = role;
-        this._field = field;
-        this._vehicle = vehicle;
-        this._equipment = equipment;
-
+    get staffId() {
+        return this._staffId;
     }
 
+    set staffId(value) {
+        this._staffId = value;
+    }
 
     get firstName() {
         return this._firstName;
@@ -156,5 +141,26 @@ export default class StaffModel {
 
     set equipment(value) {
         this._equipment = value;
+    }
+
+    constructor(firstName,lastName,designation,gender,joinedDate,dateOfBirth,address1,address2,address3,address4,address5,contactNumber,email,role,field,vehicle,equipment) {
+
+        this._firstName = firstName;
+        this._lastName = lastName;
+        this._designation = designation;
+        this._gender = gender;
+        this._joinedDate = joinedDate;
+        this._dateOfBirth = dateOfBirth;
+        this._address1 = address1;
+        this._address2 = address2;
+        this._address3 = address3;
+        this._address4 = address4;
+        this._address5 = address5;
+        this._contactNumber = contactNumber;
+        this._email = email;
+        this._role = role;
+        this._field = field;
+        this._vehicle = vehicle;
+        this._equipment = equipment;
     }
 }
