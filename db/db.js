@@ -1,1 +1,3 @@
-export let staffArray =  []
+export let staffArray =  [];
+export let fieldArray =  [];
+
