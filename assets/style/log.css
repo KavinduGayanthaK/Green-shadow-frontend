@@ -1,0 +1,53 @@
+.autocomplete-suggestions-logField{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-logField{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-logField:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions-logStaffMember{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-logStaffMember{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-logStaffMember:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions-logCrop{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-logCrop{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-logCrop:hover {
+    background-color: #e9ecef;
+}
