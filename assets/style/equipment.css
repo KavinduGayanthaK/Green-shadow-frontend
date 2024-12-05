@@ -1,0 +1,35 @@
+.autocomplete-suggestions-equipmentStaffMember{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-equipmentStaffMember{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-equipmentStaffMember:hover {
+    background-color: #e9ecef;
+}
+
+.autocomplete-suggestions-equipmentField{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    margin-top: 5px;
+}
+.autocomplete-suggestion-equipmentField{
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion-equipmentField:hover {
+    background-color: #e9ecef;
+}
