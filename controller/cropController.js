@@ -1,4 +1,4 @@
-import { fieldArray, cropArray } from "../db/db.js";
+import {fieldArray, cropArray, logArray} from "../db/db.js";
 import { CropModel } from "../model/cropModel.js";
 import {CropAPI} from "../api/cropAPI.js";
 
@@ -103,12 +103,30 @@ $('#create-crop-btn').click(async function () {
     if (recordIndexCrop !== undefined) {
         await cropApi.updateCrop(cropObj,cropArray[recordIndexCrop].cropCode);
         recordIndexCrop = undefined;
+        await loadCrops();
     } else {
-        //cropArray.push(cropObj);
-        await cropApi.saveCrop(cropObj);
+        if (cropCommonName !== "" && cropScientificName !== "" && cropCategory !== "" && cropSeason !== "" && cropImage !== "") {
+            //cropArray.push(cropObj);
+            await cropApi.saveCrop(cropObj);
+            const updatedCrops = await cropApi.getCrops();
+
+            // Update the local array and refresh UI
+            cropArray.length = 0; // Clear current array
+            cropArray.push(...updatedCrops); // Push new data
+            loadCropCards(); // Refresh the UI
+
+            clearCropFields();
+        }else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "You have Add Values First!",
+            });
+        }
+
     }
 
-    await loadCrops();
+
     clearCropFields();
 });
 
