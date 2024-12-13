@@ -358,3 +358,7 @@ function convertImage(base64Image) {
     const mimeType = "image/jpeg";
     return `data:${mimeType};base64,${base64String}`;
 }
+
+$("#logSorting").on('change', async () => {
+    await loadCardSorting($("#logSorting").val());
+})
