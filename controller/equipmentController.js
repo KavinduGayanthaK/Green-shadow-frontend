@@ -358,9 +358,9 @@ $('#equipment-table-body').on('click', '#equipment-delete-btn', function () {
 });
 
 // Load equipment table
-function loadEquipmentTable() {
+function loadEquipmentTable(sortedEquipment) {
     $('#equipment-table-body').empty();
-    equipmentArray.forEach((equipment, index) => {
+    sortedEquipment.forEach((equipment, index) => {
         // const staffDetails = equipment.allocatedStaff.map(staffItem =>
         //     `${staffItem.staff} (${staffItem.count})`
         // ).join(", ");
@@ -403,9 +403,32 @@ async function loadEquipment() {
     try {
         const equipment = await equipmentApi.getEquipment();
         equipmentArray.push(...equipment); // Spread operator adds all fields to fieldArray
-        console.log("Loaded equipment:", equipmentArray); // Directly log the array
-        loadEquipmentTable(); // Update the UI or perform further actions
+        $("#equipmentSort").val("ALL")
+        await loadTableSorting("ALL");
     } catch (error) {
         console.error("Error loading equipment:", error); // Use console.error for errors
     }
 }
+
+async function loadTableSorting(value) {
+    const sortedEquipmentList = [];
+
+    if (value === "ALL") {
+        // Add all equipment to the sorted list
+        sortedEquipmentList.push(...equipmentArray);
+    } else {
+        // Filter equipment by the given status
+        sortedEquipmentList.push(
+            ...equipmentArray.filter(equipment => equipment.status.toUpperCase() === value.toUpperCase())
+        );
+    }
+
+    // Sort the list alphabetically by equipment name
+    sortedEquipmentList.sort((a, b) => a.equipmentName.localeCompare(b.equipmentName));
+
+    // Update the table with the sorted equipment
+    loadEquipmentTable(sortedEquipmentList);
+}
+$("#equipmentSort").on('change', async () => {
+    await loadTableSorting($("#equipmentSort").val());
+})
