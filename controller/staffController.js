@@ -371,9 +371,9 @@ function clearFields() {
     selectedStaffEquipment = [];
 }
 
-function loadStaffTable() {
+function loadStaffTable(sortedStaffList) {
     $('#staff-table-body').empty();
-    staffArray.forEach((staff) => {
+    sortedStaffList.forEach((staff) => {
         let address = `${staff.address1 || ""}, ${staff.address2 || ""}, ${staff.address3 || ""}, ${staff.address4 || ""}, ${staff.address5 || ""}`;
         let fields = Array.isArray(staff.field) ? staff.field.join(", ") : "No fields assigned";
         let vehicles = Array.isArray(staff.vehicles)
@@ -427,9 +427,36 @@ async function loadStaff() {
     try {
         const staffs = await staffApi.getStaff();
         staffArray.push(...staffs); // Spread operator adds all fields to fieldArray
-        console.log("Loaded Staff:", staffArray); // Directly log the array
-        loadStaffTable(); // Update the UI or perform further actions
+        $("#staffSortBy").val("ALL")
+        await loadTaleSorting("ALL");
     } catch (error) {
         console.error("Error loading staff:", error); // Use console.error for errors
+    }
+}
+
+
+
+$("#staffSortBy").on('change', async () => {
+    await loadTaleSorting($("#staffSortBy").val());
+})
+
+let staffList ;
+async function loadTaleSorting(designation){
+    var sortedStaffList = [];
+    if (designation === "ALL"){
+        console.log("ALL")
+        staffArray.map(function (staff) {
+            sortedStaffList.push(staff);
+        });
+        staffList = sortedStaffList;
+       loadStaffTable(sortedStaffList);
+    }else {
+        staffArray.map(function (staff) {
+            if (staff.designation === designation) {
+                sortedStaffList.push(staff);
+            }
+        });
+        staffList = sortedStaffList;
+        loadStaffTable(sortedStaffList);
     }
 }
